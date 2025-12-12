@@ -57,6 +57,26 @@ weather-delivery-dashboard/
 
 ## 🚀 Quick Start
 
+### Option 1: Automated Setup (Recommended)
+```bash
+# One-command setup and start
+chmod +x setup.sh
+./setup.sh
+./start.sh
+```
+
+### Option 2: Manual Setup
+1. **Install Dependencies**
+   ```bash
+   npm run install-all
+   ```
+
+2. **Start Both Services**
+   ```bash
+   npm run dev
+   ```
+
+### Option 3: Individual Setup
 1. **Backend Setup**
    ```bash
    cd backend
@@ -71,13 +91,21 @@ weather-delivery-dashboard/
    npm start
    ```
 
-3. **Access Dashboard**
-   - Frontend: http://localhost:3000
-   - API: http://localhost:5011
+### Access Dashboard
+- Frontend: http://localhost:3000
+- API: http://localhost:5011
+- Health Check: http://localhost:5011/api/health
 
 ## 📈 Development Process
 
 This project showcases AI-accelerated development using Kiro. See `.kiro/` folder for detailed development documentation and learnings.
+
+## 🔧 Additional Scripts
+
+- `setup.sh` - Automated project setup with dependency installation
+- `start.sh` - Production-ready startup with health checks
+- `run-tests.sh` - Comprehensive test suite runner
+- `test-system.sh` - System integration tests
 
 ## 🌟 Results & Insights
 

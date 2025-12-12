@@ -47,7 +47,7 @@ run_health_checks() {
     
     # Check backend health
     echo -e "${YELLOW}Checking backend health...${NC}"
-    backend_health=$(curl -s http://localhost:5000/api/health 2>/dev/null)
+    backend_health=$(curl -s http://localhost:5011/api/health 2>/dev/null)
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ Backend health check passed${NC}"
         echo "   Response: $backend_health"
@@ -58,7 +58,7 @@ run_health_checks() {
     
     # Check weather API
     echo -e "${YELLOW}Checking weather API...${NC}"
-    weather_response=$(curl -s http://localhost:5000/api/weather/current 2>/dev/null)
+    weather_response=$(curl -s http://localhost:5011/api/weather/current 2>/dev/null)
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ Weather API working${NC}"
     else
@@ -68,7 +68,7 @@ run_health_checks() {
     
     # Check deliveries API
     echo -e "${YELLOW}Checking deliveries API...${NC}"
-    deliveries_response=$(curl -s http://localhost:5000/api/deliveries/current 2>/dev/null)
+    deliveries_response=$(curl -s http://localhost:5011/api/deliveries/current 2>/dev/null)
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ Deliveries API working${NC}"
     else
@@ -78,7 +78,7 @@ run_health_checks() {
     
     # Check correlations API
     echo -e "${YELLOW}Checking correlations API...${NC}"
-    correlations_response=$(curl -s http://localhost:5000/api/correlations 2>/dev/null)
+    correlations_response=$(curl -s http://localhost:5011/api/correlations 2>/dev/null)
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ Correlations API working${NC}"
     else
